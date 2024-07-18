@@ -65,7 +65,8 @@ module.exports = {
             minify: false
         }),
         new CopyWebpackPlugin({'patterns': [
-                { from: './public/', to: 'public' }
+                { from: './public/', to: 'public' },
+                { from: './CNAME/', to: 'CNAME', toType: 'file'}
             ]}),
     ]
 }
