@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 
 
 var video = document.getElementById("video-intro");
@@ -9,12 +9,6 @@ var logoNav = document.getElementById("logo-nav");
 window.imageClick = (url) => {
     window.location = url;
 }
-
-/*video.onload = () => {
-    intro.classList.add('intro-animation')
-    subtitle.classList.add('subtitle-animation')
-    logoNav.classList.add('logo-nav-animation')
-};*/
 
 setTimeout(() => {
         intro.classList.add('intro-animation')

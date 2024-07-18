@@ -33,10 +33,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.s[ac]ss$/i,
                 use: [
-                    "style-loader",
-                    "css-loader"
+                    // crea il tag 'style nel DOM in cui iniziare il codice
+                    'style-loader',
+                    // Converte il codice css in modulo commonJs per poterlo importare
+                    'css-loader',
+                    // Compila codice Sass in css
+                    'sass-loader'
                 ]
             },
             {
