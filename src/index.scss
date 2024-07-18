@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&display=swap');
 
+$width-container: 98%;
+$width-container2: 95%;
+
 html {
     font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
@@ -13,10 +16,11 @@ body {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
+    overflow: hidden;
 }
 
 nav {
-    width: 90%;
+    width: $width-container;
     height: 80px;
     display: flex;
     flex-flow: row nowrap;
@@ -42,6 +46,10 @@ nav {
         transition: opacity,top 0.1s linear;
         transition-delay: 0.8s;
     }
+}
+
+.body-enable-scroll {
+    overflow: auto;
 }
 
 .intro {
@@ -75,7 +83,7 @@ nav {
 }
 
 .video-container {
-    width: 90%;
+    width: $width-container;
     height: calc(94svh - 80px);
     position: relative;
     top: 0;
@@ -102,8 +110,8 @@ nav {
 }
 
 .footer-animation {
-    transition: all 1s linear;
-    transition-delay: 2s;
+    transition: opacity 1s linear;
+    transition-delay: 0.5s;
     opacity: 1 !important;
 }
 
@@ -137,30 +145,134 @@ nav {
     }
 }
 
+
+.contacts {
+    margin-top: 50px;
+    width: $width-container;
+    height: 600px;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    color: black;
+
+    h1 {
+        font-size: 4rem;
+        margin: 5px 20px;
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(223, 230, 234, 1);
+    margin: 50px 0;
+}
+
 footer {
     margin-top: 50px;
-    background-color: black;
-    width: 100%;
+    width: $width-container2;
     height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
 
-    .container-text {
-        color: white;
+    .content1 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        .logo-div {
+            flex-grow: 1;
+        }
+        .logo {
+            height: 100px;
+            flex-shrink: 0;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+            flex-grow: 1;
+        }
+    }
+
+    .content3 {
+        color: black;
         display: flex;
         justify-content: center;
         text-align: center;
         gap: 1.5rem;
-        height: 100%;
         align-items: flex-end;
+        padding-top: 50px;
 
         span, a {
-            font-size: small;
-            margin-bottom: 3.5rem;
+            font-size: 0.9rem;
             text-decoration: none;
             cursor: pointer;
-            color: white;
+            color: black;
         }
         a:hover {
             text-decoration: underline;
         }
     }
+
+    .content2 {
+        padding-top: 50px;
+        border-top: 1px solid rgba(223, 230, 234, 1);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1rem;
+        p {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 0.9rem;
+        }
+        .sitemap {
+            display: flex;
+            flex-flow: row wrap;
+            flex-grow: 1;
+            gap: 20vw;
+
+            .item {
+                min-width: 150px;
+                display: flex;
+                flex-flow: column nowrap;
+                h5 {
+                    font-size: 0.9rem;
+                    margin: 0;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        margin: 0.5rem 0;
+                        a, p {
+                            font-size: 0.9rem;
+                            text-decoration: none;
+                            color: #9a9a9a;
+                            cursor: pointer;
+                            &:hover {
+                                transition: all 0.2s linear;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+.container {
+    width: $width-container2;
+    height: 300px;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
