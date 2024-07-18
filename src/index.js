@@ -10,6 +10,8 @@ window.imageClick = (url) => {
     window.location = url;
 }
 
+console.log(video)
+
 video.addEventListener('loadeddata', (e) => {
     //Video should now be loaded but we can add a second check
     console.log('Video is loaded: ', video.readyState);
