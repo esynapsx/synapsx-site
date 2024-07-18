@@ -12,12 +12,10 @@ window.imageClick = (url) => {
 
 video.addEventListener('loadeddata', (e) => {
     //Video should now be loaded but we can add a second check
-    setTimeout(()=> {
-        if (video.readyState >= 3) {
-            intro.classList.add('intro-animation')
-            subtitle.classList.add('subtitle-animation')
-            logoNav.classList.add('logo-nav-animation')
-        }
-    }, 500)
+    if (video.readyState >= 3) {
+        intro.classList.add('intro-animation')
+        subtitle.classList.add('subtitle-animation')
+        logoNav.classList.add('logo-nav-animation')
+    }
 });
 
