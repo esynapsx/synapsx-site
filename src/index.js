@@ -17,7 +17,7 @@ setTimeout(() => {
         logoNav.classList.add('logo-nav-animation')
         footer.classList.add('footer-animation')
         document.body.classList.add('body-enable-scroll')
-}, 1000);
+}, 150);
 
 /*video.addEventListener('loadeddata', (e) => {
     //Video should now be loaded but we can add a second check

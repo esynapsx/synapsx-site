@@ -11,12 +11,15 @@ html {
 body {
     max-width: 2000px;
     color: #333;
-    margin: 0 auto;
     text-rendering: optimizeLegibility;
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     overflow: hidden;
+}
+
+section {
+    display: inline-block !important;
 }
 
 nav {
@@ -52,23 +55,6 @@ nav {
     overflow: auto;
 }
 
-.intro {
-    width: min(100svw, 2000px);
-    height: 100svh;
-    background-color: white;
-    z-index: 100;
-    position: absolute;
-
-    .logo-intro {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 300px;
-    }
-
-}
-
 .subtitle {
     width: 60%;
     font-size: 2rem;
@@ -82,11 +68,17 @@ nav {
     z-index: 2;
 }
 
-.video-container {
+.hero {
+    position: relative;
     width: $width-container;
     height: calc(94svh - 80px);
-    position: relative;
-    top: 0;
+    animation-name: opacityAndWidth;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+}
+
+.video-container {
     z-index: 1;
 }
 
@@ -155,9 +147,11 @@ nav {
     background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     color: black;
+    display: flex !important;
+    flex-flow: column nowrap;
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.7rem;
         margin: 5px 20px;
     }
 }
@@ -170,7 +164,7 @@ nav {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 150px;
     width: $width-container2;
     height: 300px;
     border-top-left-radius: 10px;
@@ -183,7 +177,7 @@ footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        padding-bottom: 50px;
+        padding-bottom: 150px;
 
         .logo-div {
             flex-grow: 1;
@@ -207,6 +201,7 @@ footer {
         gap: 1.5rem;
         align-items: flex-end;
         padding-top: 50px;
+        padding-bottom: 20px;
 
         span, a {
             font-size: 0.9rem;
@@ -269,10 +264,176 @@ footer {
     }
 }
 
-.container {
-    width: $width-container2;
-    height: 300px;
-    margin-top: 50px;
-    font-size: 2rem;
+.divider {
+    width: $width-container;
+    height: 1px;
+    background-color: rgb(223, 230, 234);
 }
 
+.sentence {
+    width: $width-container;
+    height: 300px;
+    display: flex !important;
+    justify-content: center;
+    text-align: center;
+    margin: 150px 0;
+    align-items: center;
+    animation-name: opacityAndWidthIn;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: initial;
+    animation-timeline: view();
+}
+
+.mobile {
+    width: $width-container;
+    margin: 50px 0;
+    font-size: 2rem;
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 200px;
+
+    .heading {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        h4 {
+            display: inline-block;
+        }
+    }
+
+    .text {
+        color: #9a9a9a;
+        line-height: 25px;
+        font-size: 1.2rem;
+        animation-name: textAnimation;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+        animation-direction: initial;
+        animation-timeline: view(block);
+    }
+
+    .mockup {
+        width: 200px;
+        padding-top: 60px;
+        animation-name: mockupAnimation;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+        animation-direction: initial;
+        animation-timeline: view(block);
+    }
+}
+
+
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.cta {
+    position: relative;
+    padding: 17px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: #8e9eab;
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+.cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover:before {
+    width: 100%;
+    background: rgb(223, 230, 234);
+    border: 1px solid rgba(142, 158, 171, 0.5);
+}
+.cta:hover svg {
+    transform: translateX(0);
+}
+.cta:active {
+    transform: scale(0.96);
+}
+
+
+@media screen and (max-width: 500px) {
+    .contacts {
+        height: 400px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    
+}
+
+
+@keyframes opacityAndWidth {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.8;
+        width: 68%;
+    }
+}
+
+@keyframes opacityAndWidthIn {
+    0%   {
+        font-size: 1rem;
+        opacity: 0.1;
+    }
+    50%, 100%  {
+        font-size: 2rem;
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimation {
+    0%, 25%   {
+        opacity: 0;
+    }
+    30%, 100%  {
+        opacity: 1;
+    }
+}
+
+@keyframes mockupAnimation {
+    0%, 25%   {
+        transform: translate(100px);
+        opacity: 0;
+    }
+    50%, 100%  {
+        opacity: 1;
+    }
+}

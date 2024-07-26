@@ -11,8 +11,34 @@
         <link rel="manifest" href="./public/img/favicon/site.webmanifest">
     </head>
 
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        .intro {
+            width: 100%;
+            height: 100svh;
+            background-color: white;
+            z-index: 100;
+            position: absolute;
+
+            .logo-intro {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+
     <body>
 
+        <!-- Intro -->
+        <div class="intro" id="intro">
+            <img src="./public/img/logo.svg" class="logo-intro" alt="logo">
+        </div>
+
+        <!-- Nav -->
         <nav>
             <img src="./public/img/logo-nav.webp" alt="logo" class="logo" id="logo-nav" onclick="imageClick('https://synapsx.com')">
             <!--<button class="change-language">
@@ -21,36 +47,56 @@
                 <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40"><path fill="currentColor" fill-rule="evenodd" d="m23.841 22.6 5.772-6.928-2.56-2.134-5.774 6.927a1.665 1.665 0 0 1-2.56 0l-5.773-6.927-2.56 2.134 5.772 6.928a5 5 0 0 0 7.683 0Z" clip-rule="evenodd"></path></svg>
             </button>-->
         </nav>
-        <!-- Intro -->
-        <div class="intro" id="intro">
-            <img src="./public/img/logo.svg" class="logo-intro" alt="logo" loading="eager">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="video-intro">
+                    <source src="./public/video/intro_hd.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="subtitle" id="subtitle" style="opacity: 0;">
+                <p class="subtitle_p">
+                    The future of EV charging
+                </p>
+            </div>
+        </section>
+
+        <section class="sentence" style="display: none">
+            <h4>Electric vehicle charging that meets the needs </br>of today and tomorrow.</h4>
+        </section>
+
+        <div class="divider">
+
         </div>
+        <section class="mobile" style="display: none">
+            <div class="heading">
+                <h4>CHARGING MADE EASY</h4>
 
+                <p class="text">
+                    Our charging experience ensures EV drivers</br> can get the charge they need,</br> when and how they want it.
+                </p>
 
-        <div class="video-container">
-            <video autoplay muted loop playsinline id="video-intro">
-                <source src="./public/video/intro_hd.mp4" type="video/mp4">
-            </video>
-            <!--
-            <img src="./public/img/hero.avif" id="video-intro" class="logo-intro" alt="logo">
-            -->
-        </div>
+            </div>
 
+            <img src="./public/img/mockup.webp" alt="mockup" class="mockup">
+        </section>
 
-        <div class="subtitle" id="subtitle" style="opacity: 0;">
-            <p class="subtitle_p">
-                The future of EV charging
-            </p>
-        </div>
-
-        <div class="container">
-            Electric vehicle charging that meets the needs </br>of today and tomorrow.
-        </div>
-
-
-        <div class="contacts">
+        <section class="contacts" style="display: none">
             <h1>Ready to get </br>started?</h1>
-        </div>
+
+            <div class="btn-container">
+                <a href="mailto:info@synapsx.com" class="cta">
+                    <span>Contact us</span>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+        </section>
 
         <footer class="footer" id="footer" style="opacity: 0;">
             <div class="content1">
