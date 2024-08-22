@@ -16,7 +16,6 @@ setTimeout(() => {
         subtitle.classList.add('subtitle-animation')
         logoNav.classList.add('logo-nav-animation')
         footer.classList.add('footer-animation')
-        document.body.classList.add('body-enable-scroll')
 }, 150);
 
 /*video.addEventListener('loadeddata', (e) => {

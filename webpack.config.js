@@ -64,6 +64,11 @@ module.exports = {
             description: 'The Future of EV Charging',
             minify: false
         }),
+        new HtmlWebpackPlugin({
+            template: './src/policy.html',
+            inject: true,
+            filename: 'policy.html'
+        }),
         new CopyWebpackPlugin({'patterns': [
                 { from: './public/', to: 'public' },
                 { from: './CNAME/', to: 'CNAME', toType: 'file'}
