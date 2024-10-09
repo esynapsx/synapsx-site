@@ -1,0 +1,356 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Step from "../components/Step.astro";
+---
+
+<Layout title="SynapsX">
+	<main>
+
+		<!-- Hero -->
+		<section class="hero">
+			<div class="video-container">
+				<video autoplay muted loop playsinline id="video-intro">
+					<source src="./video/intro_hd.mp4" type="video/mp4" />
+				</video>
+			</div>
+
+			<div class="subtitle" id="subtitle">
+				<h3 class="subtitle_p">Powering the Future with Intelligent EV Charging Solutions</h3>
+			</div>
+		</section>
+
+		<section class="sentence">
+			<h4>
+				Leading the transition to electric vehicles<br> by providing cutting-edge charging technology for<br>landowners, businesses, and drivers.
+			</h4>
+			<button class="rounded">
+				<span>Get Started</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 74 74"
+					height="34"
+					width="34"
+				>
+					<circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
+					<path
+						fill="black"
+						d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+					></path>
+				</svg>
+			</button>
+
+		</section>
+
+		<section class="hassle">
+				<h2>Hassle-Free Experience</h2>
+				<p>At SynapsX, we handle everything from start to finish.</p>
+
+			<div class="container-cards">
+				<div class="card">
+					<img decoding="async" loading="lazy" alt="" src="./img/card1.webp">
+					<div class="content">
+						<h3>Installation</h3>
+						<p>Expert setup by our certified technicians.</p>
+					</div>
+				</div>
+				<div class="card">
+					<img decoding="async" loading="lazy" alt="" src="./img/card2.webp">
+					<div class="content">
+						<h3>Hardware & Software</h3>
+						<p>Cutting-edge technology, fully managed by SynapsX.</p>
+					</div>
+				</div>
+				<div class="card">
+					<img decoding="async" loading="lazy" alt="" src="./img/card3.webp">
+					<div class="content">
+						<h3>Maintenance</h3>
+						<p>Ongoing support and maintenance to ensure seamless operation of the chargers.</p>
+					</div>
+				</div>
+			</div>
+				<h3>
+					Take Action Today
+				</h3>
+				<p style="padding: 4rem">
+					Partnering with SynapsX is the easiest way to join the green revolution while enhancing your property. Don't miss this chance to offer a valuable service to your clients or tenants and increase your earning potential.
+				</p>
+				<button class="rounded" onclick="window.location.href='/partners'">
+					<span>Become a Partner</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 74 74"
+						height="34"
+						width="34"
+					>
+						<circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
+						<path
+							fill="black"
+							d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+						></path>
+					</svg>
+				</button>
+
+		</section>
+
+		<section class="property">
+			<h2 class="title">How It Works</h2>
+			<p>
+				A Seamless EV Charging Solution for Your Property.<br>
+				Here’s how SynapsX makes it easy to add EV chargers to your property, at zero cost to you.
+			</p>
+
+			<Step></Step>
+		</section>
+
+		<section class="mobile">
+			<div class="heading">
+				<h2>Charging made easy</h2>
+
+				<p class="text">
+					Our charging experience ensures EV drivers<br />
+					can get the charge they need,<br />
+					when and how they want it.
+				</p>
+			</div>
+
+			<img src="./img/mockup.webp" alt="mockup" class="mockup" />
+
+			<div class="download-app-img">
+				<a href="https://apps.apple.com/gb/app/" target="_blank">
+					<img class="badge-img" decoding="async" loading="lazy" alt="App Store logo" src="./img/badge-app/badge-app-store.webp" srcset="/img/badge-app/badge-app-store.webp 449w, /img/badge-app/badge-app-store-300x89.webp 300w, /img/badge-app/badge-app-store-150x44.webp 150w" sizes="(max-width: 449px) 100vw, 449px">
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=" target="_blank">
+					<img class="badge-img" decoding="async" loading="lazy" alt="Google Play logo" src="/img/badge-app/badge-google.svg" srcset="" sizes="(max-width: 152px) 100vw, 152px">
+				</a>
+			</div>
+
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		display: flex;
+		align-items: center;
+		flex-flow: column nowrap;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.hero {
+		position: relative;
+		width: 98%;
+		height: calc(94svh - 80px);
+		animation-name: opacityAndWidth;
+		animation-duration: 1ms; /* Firefox requires this to apply the animation */
+		animation-direction: alternate;
+		animation-timeline: scroll(block nearest);
+	}
+
+	.video-container {
+		z-index: 1;
+	}
+
+	#video-intro {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		object-fit: cover;
+		border-radius: 50px;
+	}
+
+	.subtitle {
+		width: 60%;
+		font-size: 2rem;
+		color: rgba(255, 255, 255, 1);
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 2;
+	}
+
+
+	.sentence {
+		position: relative;
+		width: 95%;
+		height: 500px;
+		display: flex !important;
+		flex-flow: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		animation-name: opacityAndWidthIn;
+		animation-duration: 1ms; /* Firefox requires this to apply the animation */
+		animation-direction: initial;
+		animation-timeline: view();
+
+		.rounded {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	.hassle {
+		margin: 10rem 0;
+		padding: 2rem;
+		background-color: #dfe6ea;
+		h2 {
+			font-size: 2rem;
+		}
+		p {
+			font-weight: 200;
+			color: #333333;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			text-align: center;
+		}
+
+		button {
+			margin: 1rem 4rem;
+		}
+
+		.container-cards {
+			padding: 3rem 0;
+			display: flex;
+			flex-flow: row wrap;
+			gap: 1rem;
+			justify-content: space-evenly;
+		}
+
+		.card {
+			padding: 5px;
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			align-items: flex-start;
+			box-shadow: 0 4px 20px rgba(52, 52, 87, 0.08);
+			border-radius: 20px;
+			background-color: white;
+			width: 300px;
+			height: 350px;
+			transition: all 200ms ease-out;
+
+			h3 {
+				font-size: 1rem;
+				text-align: center;
+			}
+
+			.content {
+				width: 100%;
+
+				p {
+					text-align: center;
+					display: none;
+					margin: 0;
+				}
+			}
+
+			img {
+				border-radius: 20px;
+				transition: all 200ms ease-out;
+				object-fit: cover;
+				width: 100%;
+				height: 300px;
+			}
+
+			&:hover {
+				img {
+					height: 200px;
+				}
+				p {
+					display: block;
+				}
+			}
+		}
+	}
+
+
+	.property {
+		padding: 2rem;
+	}
+
+	.mobile {
+		padding: 5rem 0;
+		display: flex !important;
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 200px;
+
+		.heading {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+
+			h2 {
+				font-size: 2rem;
+				display: inline-block;
+			}
+		}
+
+		.text {
+			color: #9a9a9a;
+			line-height: 25px;
+			font-size: 1.2rem;
+			animation-name: textAnimation;
+			animation-duration: 1ms; /* Firefox requires this to apply the animation */
+			animation-direction: initial;
+			animation-timeline: view(block);
+		}
+
+		.mockup {
+			width: 200px;
+			padding-top: 60px;
+			animation-name: mockupAnimation;
+			animation-duration: 1ms; /* Firefox requires this to apply the animation */
+			animation-direction: initial;
+			animation-timeline: view(block);
+		}
+	}
+
+	.download-app-img {
+		width: 100vw;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		gap: 1rem;
+
+		a,.badge-img {
+			width: 150px;
+		}
+	}
+
+
+
+
+
+
+
+	@media screen and (max-width: 500px) {
+		.contacts {
+			height: 400px;
+
+			h1 {
+				font-size: 2rem;
+			}
+		}
+
+		.sentence {
+			h4 {
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+</style>

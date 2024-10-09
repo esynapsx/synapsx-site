@@ -1,0 +1,172 @@
+---
+
+---
+
+
+<footer class="footer" id="footer">
+    <!--<div class="content1">
+        <div class="logo-div">
+            <img src="./img/logo.webp" class="logo" alt="logo" />
+        </div>
+        <a class="underline-link">info@synapsx.com</a>
+    </div>-->
+    <div class="content2">
+
+        <div class="sitemap">
+            <div class="item">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/partners">Partnership</a></li>
+                    <li><a href="/faq">Faq</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h5>Address</h5>
+                <ul>
+                    <li><p>San Francisco • 450 Townsend St, CA, 94107</p></li>
+                    <li><p>Milan • via Edolo 46, 20125</p></li>
+                </ul>
+                <br>
+            </div>
+            <div class="item withLogo">
+                <a class="underline-link">info@synapsx.com</a>
+                <div class="container-logo">
+                    <img src="./img/logo.webp" class="logo" alt="logo" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content3">
+        <a href="https://synapsx.com/">© 2024 SynapsX. All rights reserved.</a>
+        <a href="/policy">Privacy Policy</a>
+        <!--<a href="/en/legal/">Legal Notice</a>
+              <a href="/en/tos/">Terms of Service</a>
+              <a href="/en/privacy/">Privacy</a>-->
+    </div>
+</footer>
+
+
+<style>
+    footer {
+        padding: 2rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        border-top: 1px solid rgba(223, 230, 234, 1);
+
+
+        .content3 {
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            gap: 1.5rem;
+            align-items: flex-end;
+            padding-top: 50px;
+
+            span, a {
+                font-size: 0.9rem;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+            }
+
+            a:after {
+                content: "";
+                position: relative;
+                bottom: -2px;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: black;
+                transform: scale(0, 1);
+                transform-origin: 100% 50%;
+                transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            a:hover:after {
+                transform: scale(1);
+                transform-origin: 0 50%;
+            }
+        }
+
+        .withLogo {
+            align-items: flex-end;
+        }
+
+        .content2 {
+            padding-top: 50px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            .logo {
+                width: 100px;
+                padding-top: 1rem;
+            }
+            p {
+                margin: 0;
+                flex-grow: 1;
+                font-size: 0.9rem;
+            }
+            .sitemap {
+                display: flex;
+                flex-flow: row wrap;
+                flex-grow: 1;
+                justify-content: space-between;
+                gap: 2rem;
+
+                .item {
+                    min-width: 150px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    h5 {
+                        font-size: 0.9rem;
+                        margin: 0;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            margin: 0.5rem 0;
+                            a, p {
+                                font-size: 0.9rem;
+                                text-decoration: none;
+                                color: #9a9a9a;
+                                cursor: pointer;
+                                &:hover {
+                                    transition: all 0.2s linear;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .container-logo {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        .content2 {
+            padding-top: 0!important;
+        }
+        .withLogo {
+            align-items: start !important;
+        }
+    }
+</style>

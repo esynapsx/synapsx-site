@@ -1,30 +1,24 @@
 {
-  "name": "synapsx-site",
-  "version": "1.0.0",
-  "description": "The Future Of EV Charging",
-  "main": "index.js",
+  "name": "synapsx",
+  "type": "module",
+  "version": "2.0.0",
   "scripts": {
-    "start": "webpack serve --mode development --open --config webpack.config.js",
-    "build": "webpack",
-    "dev": "webpack serve",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prettier": "npx prettier . --write",
     "deploy": "npm run build && gh-pages -d dist"
   },
-  "author": "SynapsX",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "babel-loader": "^9.1.3",
-    "copy-webpack-plugin": "^12.0.2",
-    "css-loader": "^7.1.2",
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^4.15.11",
     "gh-pages": "^6.1.1",
-    "html-webpack-plugin": "^5.6.0",
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
     "prettier": "^3.3.3",
-    "sass": "^1.77.8",
-    "sass-loader": "^14.2.1",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
