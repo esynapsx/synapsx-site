@@ -42,36 +42,38 @@ import Step from "../components/Step.astro";
 		</section>
 
 		<section class="hassle">
+
+			<div class="container">
 				<h2>Hassle-Free Experience</h2>
 				<p>At SynapsX, we handle everything from start to finish.</p>
 
-			<div class="container-cards">
-				<div class="card">
-					<img decoding="async" loading="lazy" alt="" src="./img/card1.webp">
-					<div class="content">
-						<h3>Installation</h3>
-						<p>Expert setup by our certified technicians.</p>
+				<div class="container-cards">
+					<div class="card">
+						<img decoding="async" loading="lazy" alt="" src="./img/card1.webp">
+						<div class="content">
+							<h3>Installation</h3>
+							<p>Expert setup by our certified technicians.</p>
+						</div>
+					</div>
+					<div class="card">
+						<img decoding="async" loading="lazy" alt="" src="./img/card2.webp">
+						<div class="content">
+							<h3>Hardware & Software</h3>
+							<p>Cutting-edge technology, fully managed by SynapsX.</p>
+						</div>
+					</div>
+					<div class="card">
+						<img decoding="async" loading="lazy" alt="" src="./img/card3.webp">
+						<div class="content">
+							<h3>Maintenance</h3>
+							<p>Ongoing support and maintenance to ensure seamless operation of the chargers.</p>
+						</div>
 					</div>
 				</div>
-				<div class="card">
-					<img decoding="async" loading="lazy" alt="" src="./img/card2.webp">
-					<div class="content">
-						<h3>Hardware & Software</h3>
-						<p>Cutting-edge technology, fully managed by SynapsX.</p>
-					</div>
-				</div>
-				<div class="card">
-					<img decoding="async" loading="lazy" alt="" src="./img/card3.webp">
-					<div class="content">
-						<h3>Maintenance</h3>
-						<p>Ongoing support and maintenance to ensure seamless operation of the chargers.</p>
-					</div>
-				</div>
-			</div>
 				<h3>
 					Take Action Today
 				</h3>
-				<p style="padding: 4rem">
+				<p>
 					Partnering with SynapsX is the easiest way to join the green revolution while enhancing your property. Don't miss this chance to offer a valuable service to your clients or tenants and increase your earning potential.
 				</p>
 				<button class="rounded" onclick="window.location.href='/partners'">
@@ -90,6 +92,7 @@ import Step from "../components/Step.astro";
 						></path>
 					</svg>
 				</button>
+			</div>
 
 		</section>
 
@@ -132,7 +135,7 @@ import Step from "../components/Step.astro";
 
 <style>
 	main {
-		margin: auto;
+		margin: 0;
 		display: flex;
 		align-items: center;
 		flex-flow: column nowrap;
@@ -200,9 +203,13 @@ import Step from "../components/Step.astro";
 	}
 
 	.hassle {
-		margin: 10rem 0;
-		padding: 2rem;
+		margin: 5rem 0;
+		width: 100%;
 		background-color: #dfe6ea;
+
+		.container {
+			padding: 2rem;
+		}
 		h2 {
 			font-size: 2rem;
 		}
@@ -216,9 +223,6 @@ import Step from "../components/Step.astro";
 			text-align: center;
 		}
 
-		button {
-			margin: 1rem 4rem;
-		}
 
 		.container-cards {
 			padding: 3rem 0;
