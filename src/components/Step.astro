@@ -10,22 +10,22 @@
     <input type="radio" name="slider" title="slide4" class="slider__nav"/>
     <div class="slider__inner">
         <div class="slider__contents">
-            <img src="/img/checklist.png" class="slider__image" width="54px" alt="checklist"></img>
+            <div class="image site"></div>
             <h2 class="slider__caption">Site Assessment</h2>
             <p class="slider__txt">We assess your property to ensure it meets the necessary requirements for EV charger installation.</p>
         </div>
         <div class="slider__contents">
-            <img src="/img/tool-box.png" class="slider__image" width="54px" alt="tool-box"></img>
+            <div class="image install"></div>
             <h2 class="slider__caption">Installation</h2>
             <p class="slider__txt">SynapsX handles all installation, from electrical setup to hardware deployment, ensuring a smooth and professional process.</p>
         </div>
         <div class="slider__contents">
-            <img src="/img/wage.png" class="slider__image" width="54px" alt="wage"></img>
+            <div class="image earning"></div>
             <h2 class="slider__caption">Start Earning</h2>
             <p class="slider__txt">Once installed, you start earning 5% of the profits from the EV chargers. For an additional investment of $1,000, you can increase your profit share to 10%.</p>
         </div>
         <div class="slider__contents">
-            <img src="/img/maintenance.png" class="slider__image" width="54px" alt="maintenance"></img>
+            <div class="image maintenance"></div>
             <h2 class="slider__caption">Ongoing Maintenance</h2>
             <p class="slider__txt">We monitor and maintain the equipment to ensure maximum uptime and efficiency, giving you peace of mind.</p>
         </div>
@@ -35,7 +35,7 @@
 
 <style>
     .slider {
-        height: 500px;
+        height: 800px;
         position: relative;
         overflow: hidden;
         display: -webkit-box;
@@ -104,7 +104,6 @@
     }
     .slider__contents {
         height: 100%;
-        padding: 2rem;
         text-align: center;
         display: -webkit-box;
         display: -webkit-flex;
@@ -125,6 +124,27 @@
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+
+        .image {
+            height: 100vw;
+            max-height: 500px;
+            width: 100%;
+            background-size: cover;
+            border-radius: 20px;
+
+            &.site {
+                background-image: url('/img/index/site.webp');
+            }
+            &.install {
+                background-image: url('/img/index/install.webp');
+            }
+            &.earning {
+                background-image: url('/img/index/earning.webp');
+            }
+            &.maintenance {
+                background-image: url('/img/index/maintenance.webp');
+            }
+        }
     }
     .slider__caption {
         font-weight: 500;

@@ -97,27 +97,32 @@ import Step from "../components/Step.astro";
 		</section>
 
 		<section class="property">
-			<h2 class="title">How It Works</h2>
-			<p>
-				A Seamless EV Charging Solution for Your Property.<br>
-				Here’s how SynapsX makes it easy to add EV chargers to your property, at zero cost to you.
-			</p>
 
-			<Step></Step>
+			<div class="container">
+				<h2 class="title">How It Works</h2>
+				<p>
+					A Seamless EV Charging Solution for Your Property.<br>
+					Here’s how SynapsX makes it easy to add EV chargers to your property, at zero cost to you.
+				</p>
+
+				<Step></Step>
+			</div>
+
+
 		</section>
 
 		<section class="mobile">
+			<h2>Charging made easy</h2>
+
 			<div class="heading">
-				<h2>Charging made easy</h2>
 
 				<p class="text">
 					Our charging experience ensures EV drivers<br />
 					can get the charge they need,<br />
 					when and how they want it.
 				</p>
+				<img src="/img/mockup.webp" alt="mockup" class="mockup" />
 			</div>
-
-			<img src="/img/mockup.webp" alt="mockup" class="mockup" />
 
 			<div class="download-app-img">
 				<a href="https://apps.apple.com/gb/app/" target="_blank">
@@ -127,7 +132,6 @@ import Step from "../components/Step.astro";
 					<img class="badge-img" decoding="async" loading="lazy" alt="Google Play logo" src="/img/badge-app/badge-google.svg" srcset="" sizes="(max-width: 152px) 100vw, 152px">
 				</a>
 			</div>
-
 		</section>
 
 	</main>
@@ -281,30 +285,32 @@ import Step from "../components/Step.astro";
 
 
 	.property {
-		padding: 2rem;
+		margin: 5rem 0;
+		width: 100%;
+		.container {
+			padding: 2rem;
+		}
 	}
 
 	.mobile {
-		padding: 5rem 0;
 		display: flex !important;
-		flex-flow: row wrap;
+		flex-flow: column wrap;
 		justify-content: center;
-		gap: 200px;
+
+		h2 {
+			padding: 2rem;
+			font-size: 2rem;
+		}
 
 		.heading {
+			padding: 2rem;
 			display: flex;
-			flex-flow: column nowrap;
-			justify-content: space-between;
-
-			h2 {
-				font-size: 2rem;
-				display: inline-block;
-			}
+			flex-flow: row wrap;
+			justify-content: space-evenly;
 		}
 
 		.text {
-			color: #9a9a9a;
-			line-height: 25px;
+			align-self: center;
 			font-size: 1.2rem;
 			animation-name: textAnimation;
 			animation-duration: 1ms; /* Firefox requires this to apply the animation */
@@ -328,6 +334,7 @@ import Step from "../components/Step.astro";
 		flex-flow: row nowrap;
 		justify-content: center;
 		gap: 1rem;
+		padding-bottom: 5rem;
 
 		a,.badge-img {
 			width: 150px;
