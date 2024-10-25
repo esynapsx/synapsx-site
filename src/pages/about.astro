@@ -48,23 +48,31 @@ import RoundButton from "../components/RoundButton.astro";
 
             <div class="cards">
                 <div class="card">
-                    <img decoding="async" loading="lazy" alt="idea icon" src="/img/about/idea.png">
-                    <h3>Innovation</h3>
+                    <div class="header">
+                        <img decoding="async" loading="lazy" alt="idea icon" src="/img/icon/innovation.png">
+                        <h3>Innovation</h3>
+                    </div>
                     <p>Leveraging cutting-edge technology to provide seamless EV charging solutions.</p>
                 </div>
                 <div class="card">
-                    <img decoding="async" loading="lazy" alt="sustainability icon" src="/img/about/planet-earth.png">
-                    <h3>Sustainability</h3>
+                    <div class="header">
+                        <img decoding="async" loading="lazy" alt="sustainability icon" src="/img/icon/sustainability.png">
+                        <h3>Sustainability</h3>
+                    </div>
                     <p>Supporting the transition to a greener, more sustainable future.</p>
                 </div>
                 <div class="card">
-                    <img decoding="async" loading="lazy" alt="idea icon" src="/img/about/partnership.png">
-                    <h3>Partnership</h3>
+                    <div class="header">
+                        <img decoding="async" loading="lazy" alt="idea icon" src="/img/icon/partnership.png">
+                        <h3>Partnership</h3>
+                    </div>
                     <p>Collaborating with landowners and businesses to create a mutually beneficial model.</p>
                 </div>
                 <div class="card">
-                    <img decoding="async" loading="lazy" alt="idea icon" src="/img/about/guarantee.png">
-                    <h3>Reliability</h3>
+                    <div class="header">
+                        <img decoding="async" loading="lazy" alt="idea icon" src="/img/icon/reliability.png">
+                        <h3>Reliability</h3>
+                    </div>
                     <p>Providing a robust and dependable charging network for all users.</p>
                 </div>
             </div>
@@ -80,7 +88,8 @@ import RoundButton from "../components/RoundButton.astro";
 <style lang="scss">
 
     .hero {
-        padding: 5rem 2rem;
+      margin-top: 100px;
+      padding: 5rem 2rem;
         display: flex;
         flex-flow: row wrap;
 
@@ -154,7 +163,7 @@ import RoundButton from "../components/RoundButton.astro";
     }
 
     .core-value {
-        background-color: #dfe6ea;
+        background-color: var(--light-grey);
         margin: 10rem 0 0 0;
         padding: 2rem;
         display: flex;
@@ -188,10 +197,19 @@ import RoundButton from "../components/RoundButton.astro";
         box-shadow: 0 2px 6px rgba(52, 52, 87, 0.06);
         border-radius: 20px;
 
+      .header {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+      }
+
         img {
             width: 40px;
             height: 40px;
         }
+      h3 {
+        margin: 0;
+      }
     }
 
 

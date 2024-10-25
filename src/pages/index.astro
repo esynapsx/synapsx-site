@@ -143,14 +143,14 @@ import Card from "../components/Card.astro";
 	.hero {
 		position: relative;
 		width: 100%;
-		height: calc(100svh - 100px);
+		height: calc(100svh);
 		animation-name: opacityAndWidth;
 		animation-duration: 1000ms; /* Firefox requires this to apply the animation */
 		animation-direction: alternate;
 		animation-timeline: scroll(block nearest);
 
 		.background {
-			height: calc(100svh - 100px);
+			height: calc(100svh);
 			width: 40%;
 			position: absolute;
 			top:0;
@@ -160,7 +160,7 @@ import Card from "../components/Card.astro";
 		}
 
 		.overlay {
-			height: calc(100svh - 100px);
+			height: calc(100svh);
 			width: 100%;
 			position: absolute;
 			top:0;
@@ -231,7 +231,7 @@ import Card from "../components/Card.astro";
 			display: flex;
 			flex-flow: row wrap;
 			gap: 1rem;
-			justify-content: space-evenly;
+			justify-content: center;
 			animation-name: fadeIn;
 			animation-duration: 1000ms; /* Firefox requires this to apply the animation */
 			animation-direction: initial;
@@ -314,7 +314,7 @@ import Card from "../components/Card.astro";
 			display: flex;
 			flex-flow: row wrap;
 			gap: 1rem;
-			justify-content: space-evenly;
+			justify-content: center;
 			animation-name: fadeIn;
 			animation-duration: 1000ms; /* Firefox requires this to apply the animation */
 			animation-direction: initial;
