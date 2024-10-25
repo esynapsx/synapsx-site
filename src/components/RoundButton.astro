@@ -53,4 +53,14 @@ const { text, onClick } = Astro.props;
         transform: scale(0.95);
     }
 
+    @media screen and (max-width: 768px) {
+      button.rounded {
+        padding: 0px 10px;
+        font-size: 10px;
+      }
+      button.rounded > svg {
+        width: 24px;
+      }
+    }
+
 </style>

@@ -111,7 +111,7 @@ import Card from "../components/Card.astro";
 				<div class="card">
 					<img src="/img/qrcode.png" alt="qrcode" class="qrcode"/>
 					<div class="content">
-						<h3>Download our Google app</h3>
+						<h5>Download our Google app</h5>
 						<p>Scan to download</p>
 					</div>
 					<img src="/img/icon/arrow-right.png" alt="arrow" class="icon"/>
@@ -119,7 +119,7 @@ import Card from "../components/Card.astro";
 				<div class="card">
 					<img src="/img/qrcode.png" alt="qrcode" class="qrcode"/>
 					<div class="content">
-						<h3>Download our Apple app</h3>
+						<h5>Download our Apple app</h5>
 						<p>Scan to download</p>
 					</div>
 					<img src="/img/icon/arrow-right.png" alt="arrow" class="icon"/>
@@ -196,7 +196,6 @@ import Card from "../components/Card.astro";
 
 	.text-content {
 		width: 50%;
-		font-size: 3rem;
 		color: rgba(255, 255, 255, 1);
 		text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		position: absolute;
@@ -237,7 +236,6 @@ import Card from "../components/Card.astro";
 			padding: 2rem;
 		}
 		p {
-			font-weight: 200;
 			color: #333333;
 		}
 
@@ -292,7 +290,6 @@ import Card from "../components/Card.astro";
 
 			p {
 				padding: 2rem 0;
-				font-size: 1.5rem;
 			}
 		}
 	}
@@ -366,6 +363,10 @@ import Card from "../components/Card.astro";
 				cursor: pointer;
 				justify-content: space-between;
 
+				h5 {
+					margin: 0;
+				}
+
 				.qrcode {
 					height: 100%;
 				}
@@ -411,7 +412,6 @@ import Card from "../components/Card.astro";
 
 		.text {
 			align-self: center;
-			font-size: 1.2rem;
 			animation-name: textAnimation;
 			animation-duration: 1ms; /* Firefox requires this to apply the animation */
 			animation-direction: initial;
@@ -434,7 +434,7 @@ import Card from "../components/Card.astro";
 				font-size: 2rem;
 			}
 			.subtitle {
-				font-size: 1.5rem !important;
+				font-size: 1.5rem;
 			}
 		}
 
@@ -445,20 +445,33 @@ import Card from "../components/Card.astro";
 	}
 
 	@media screen and (max-width: 768px) {
+		.text-content {
+			.title {
+				font-size: 1.6rem;
+			}
+			.subtitle {
+				font-size: 1.2rem;
+			}
+		}
+
 		.section_mobile{
 
+			.content2 {
 				.card {
-					gap: 2px !important;
+					gap: 0;
 					width: 100%;
-					height: 60px !important;
+					height: 60px;
+
+					.qrcode {
+						height: 40px;
+					}
 
 					.icon {
-						height: 30px !important;
+						height: 30px;
 					}
 				}
+			}
 		}
 	}
-
-
 
 </style>
