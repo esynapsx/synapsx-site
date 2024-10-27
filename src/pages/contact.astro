@@ -11,7 +11,7 @@ import RoundButton from "../components/RoundButton.astro";
         <div class="container">
             <h1>Contact Us</h1>
 
-            <div class="form">
+            <div class="form" id="form">
                 <div class="row">
                     <div class="input-group">
                         <label class="label">Email</label>
@@ -29,7 +29,7 @@ import RoundButton from "../components/RoundButton.astro";
                     </div>
                 </div>
                 <div class="row">
-                    <RoundButton text="Send" onClick="window.location.href='/partners'"></RoundButton>
+                    <RoundButton text="Send"></RoundButton>
                 </div>
 
             </div>
@@ -39,6 +39,20 @@ import RoundButton from "../components/RoundButton.astro";
     </main>
 </Layout>
 
+
+<script>
+    const btn = document.getElementsByClassName("rounded");
+
+    const send = () => {
+        const email = document.getElementById("email")?.value;
+        const name = document.getElementById("name")?.value;
+        const message = document.getElementById("message")?.value;
+        console.log(email, name, message);
+
+    }
+    btn[0].addEventListener("click", send);
+
+</script>
 
 
 

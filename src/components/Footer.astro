@@ -94,6 +94,10 @@
             padding: 2rem 2rem 0 2rem;
             background-image: url("/img/footer/bg.png");
             background-size: cover;
+
+          h3 {
+            margin: 0;
+          }
         }
 
         .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -205,6 +209,11 @@
 
     @media (max-width: 768px) {
       footer {
+        .div1 {
+          img {
+            width: 150px;
+          }
+        }
         .content2 {
           padding: 10px;
           a, span {
@@ -214,11 +223,11 @@
 
         .sitemap {
           grid-template-columns: 1fr;
-          grid-template-rows: repeat(8, 1fr);
-          .div1 { grid-area: auto; }
+          grid-template-rows: repeat(8, auto);
+          .div1 { grid-area: auto;  }
           .div2 { grid-area: auto; }
           .div3 { grid-area: auto; }
-          .div4 { grid-area: auto; }
+          .div4 { grid-area: 2; }
           .div5 { grid-area: auto; }
           .div6 { grid-area: auto; }
           .div7 { grid-area: auto; }

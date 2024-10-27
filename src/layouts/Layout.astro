@@ -38,6 +38,10 @@ const { title } = Astro.props;
 		/>
 		<link rel="manifest" href="/img/favicon/site.webmanifest" />
 		<title>{title}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 		<ViewTransitions />
 	</head>
 	<body>
@@ -47,7 +51,6 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&display=swap');
 
 	:root {
 		--white: #ffffff;
@@ -75,6 +78,7 @@ const { title } = Astro.props;
 	html {
 		font-family: 'Outfit', sans-serif;
 		scroll-behavior: smooth;
+		font-optical-sizing: auto;
 		background: #ffffff;
 	}
 
