@@ -14,11 +14,11 @@ import RoundButton from "../components/RoundButton.astro";
             <div class="form" id="form">
                 <div class="row">
                     <div class="input-group">
-                        <label class="label">Email</label>
+                        <label class="label" for="email">Email</label>
                         <input autocomplete="on" name="email" id="email" class="input" type="email">
                     </div>
                     <div class="input-group">
-                        <label class="label">Name</label>
+                        <label class="label" for="name">Name</label>
                         <input autocomplete="off" name="name" id="name" class="input" type="text">
                     </div>
                 </div>
@@ -44,9 +44,9 @@ import RoundButton from "../components/RoundButton.astro";
     const btn = document.getElementsByClassName("rounded");
 
     const send = () => {
-        const email = document.getElementById("email")?.value;
-        const name = document.getElementById("name")?.value;
-        const message = document.getElementById("message")?.value;
+        const email = (document.getElementById("email") as HTMLInputElement)?.value;
+        const name = (document.getElementById("name")as HTMLInputElement)?.value;
+        const message = (document.getElementById("message")as HTMLInputElement)?.value;
         console.log(email, name, message);
 
     }
